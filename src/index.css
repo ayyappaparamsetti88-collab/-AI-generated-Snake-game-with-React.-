@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-pink: #ff00ff;
+  --color-neon-cyan: #00ffff;
+  --color-neon-lime: #39ff14;
+  --color-dark-bg: #050505;
+  --color-dark-surface: #121212;
+  
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 50% -20%, rgba(0, 255, 255, 0.1) 0%, transparent 60%),
+      radial-gradient(circle at 0% 100%, rgba(255, 0, 255, 0.05) 0%, transparent 40%);
+  }
+}
+
+.neon-border-pink {
+  box-shadow: 0 0 5px var(--color-neon-pink), inset 0 0 5px var(--color-neon-pink);
+  border: 1px solid var(--color-neon-pink);
+}
+
+.neon-border-cyan {
+  box-shadow: 0 0 5px var(--color-neon-cyan), inset 0 0 5px var(--color-neon-cyan);
+  border: 1px solid var(--color-neon-cyan);
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 5px var(--color-neon-pink);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 5px var(--color-neon-cyan);
+}
+
+.neon-text-lime {
+  text-shadow: 0 0 5px var(--color-neon-lime);
+}
+
+.glass-panel {
+  @apply bg-dark-surface/80 backdrop-blur-md border border-white/10 rounded-2xl;
+}
+
+.thick-hardware-border {
+  border: 12px solid var(--color-neon-pink);
+  box-shadow: 0 0 20px var(--color-neon-pink), inset 0 0 10px var(--color-neon-pink);
+  border-radius: 24px;
+}
